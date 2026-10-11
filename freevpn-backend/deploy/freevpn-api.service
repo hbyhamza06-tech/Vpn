@@ -1,0 +1,16 @@
+[Unit]
+Description=FreeVPN provisioning API
+After=network-online.target
+
+[Service]
+User=freevpn
+ExecStart=/usr/bin/python3 /opt/freevpn/server.py /etc/freevpn/config.json
+StateDirectory=freevpn
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

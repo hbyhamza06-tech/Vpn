@@ -1,0 +1,17 @@
+{
+  "listen": "127.0.0.1:8080",
+  "db": "/var/lib/freevpn/peers.db",
+  "trust_proxy": true,
+  "rate_limit_per_hour": 10,
+  "peer_ttl_days": 14,
+  "servers": [
+    {
+      "id": "de1", "country": "Germany", "countryCode": "DE", "city": "Frankfurt",
+      "probeUrl": "https://de1.example.com/health",
+      "endpoint": "de1.example.com:51820",
+      "publicKey": "PASTE_CONTENTS_OF_/etc/wireguard/server.pub",
+      "interface": "wg0", "subnet": "10.8.0.0/24", "dns": "10.8.0.1",
+      "ssh": null
+    }
+  ]
+}
